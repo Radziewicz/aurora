@@ -1,7 +1,7 @@
 
   .nav-item-dropdown {
     position: relative;
-    
+    list-style: none;
     &:hover > .dropdown-menu {
       display: block;
       opacity: 1;
@@ -10,7 +10,6 @@
   
   .dropdown-trigger {
     position: relative;
-    
     &:focus + .dropdown-menu {
       display: block;
       opacity: 1;
@@ -19,6 +18,7 @@
   }
   
   .dropdown-menu {
+    list-style: none;
     display: inline-block;
     text-align: right;
     position: absolute;
