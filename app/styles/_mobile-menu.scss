@@ -1,6 +1,7 @@
 @import '_variables';
 
 .nav-btn {
+    grid-area: hamburger;
     z-index: 2;
     height: 25px;
     width: 25px;

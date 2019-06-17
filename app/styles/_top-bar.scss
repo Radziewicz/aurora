@@ -26,13 +26,22 @@
         }   
     }
     &__login {
+        height: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-column-gap: 50px;
         @include screen('tablet') {
             grid-template-columns: auto auto;
-            grid-column-gap: 20px;
             justify-content: space-between;
+        }
+        a {
+            padding: 10px 20px 0 20px;
+            &:first-child {
+                border-left: 1px solid var(--color-border);
+            }
+            &:last-child {
+                border-left: 1px solid var(--color-border);
+                border-right: 1px solid var(--color-border);
+            }
         }
     }
 }

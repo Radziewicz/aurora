@@ -4,8 +4,7 @@
     display: none;
     @extend %container;
     @include screen('desktop') {
-        padding: 0 5%;
-        height: 40px;
+        height: 60px;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -20,4 +19,8 @@
             font-size: var(--font-normal);
         }
       }
+}
+
+.nav .active {
+    color: #ecc7d0;
 }
