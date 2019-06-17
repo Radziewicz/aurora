@@ -1,0 +1,20 @@
+@import '_variables';
+
+body {
+    font-family: 'Lato', sans-serif;
+  }
+
+  .container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: red;
+    @include screen('tablet') {
+      max-width: 600px;
+      background-color: yellow;
+    }
+    @include screen('desktop') {
+      max-width: 960px;
+      background-color: deepskyblue;
+   }
+  }
+

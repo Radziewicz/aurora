@@ -1,0 +1,33 @@
+body {
+    --color-light: #fff;
+    --color-dark: #000;
+    --color-dusky: #a3a2a2;
+    --color-accent: #eb2f69;
+    --color-active: #ecc7d0;
+    --color-border: #d7d7d7;
+    --font-normal: 14px;
+    --font-small: 13px;
+    --content-size-mobile: 480px;
+    --content-size-tablet: 680px;
+    --content-size-desktop: 960px;
+}
+
+@mixin screen($size) {
+  $desktop: "(min-width: 1024px)";
+  $tablet: "(min-width: 768px)";
+  @if $size == desktop {
+    @media only screen and #{$desktop} {
+      @content;
+    }
+  }
+  @else if $size == tablet {
+    @media only screen and #{$tablet} {
+      @content;
+    }
+  }
+  @else {
+    @media only screen and #{$size} {
+      @content;
+    }
+  }
+}
