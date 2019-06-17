@@ -4,17 +4,21 @@ body {
     font-family: 'Lato', sans-serif;
   }
 
-  .container {
-    max-width: 500px;
+  %container {
+    max-width: var(--content-size-mobile);
     margin: 0 auto;
-    background-color: red;
     @include screen('tablet') {
-      max-width: 600px;
-      background-color: yellow;
+      max-width: var(--content-size-tablet);
     }
     @include screen('desktop') {
-      max-width: 960px;
-      background-color: deepskyblue;
+      max-width: var(--content-size-desktop);
    }
+  }
+
+  .hide {
+    display: none;
+    @include screen('tablet') {
+      display: block;
+    }
   }
 
