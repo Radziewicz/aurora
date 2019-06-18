@@ -4,13 +4,14 @@
     height: 130px;
     display: grid;
     align-items: center;
-    grid-template-columns: 30px 100px auto 100px;
+    justify-items: center;
+    grid-template-columns: 1fr 2fr 1.5fr;
     @extend %container; 
     grid-template-areas:
     "hamburger logo basket"
     "input input input";
     @include screen('tablet') {
-        grid-template-columns: 30px 100px auto 80px;
+        grid-template-columns: 50px 150px auto 80px;
         grid-template-areas:
         "hamburger logo input basket";
     }
@@ -21,35 +22,45 @@
         grid-area: logo;
         img {
             width: 100px;
-            height: 40px;
+            height: auto;
+            @include screen('tablet') {
+                width: 120px;
+                height: auto;
+            }
             @include screen('desktop') {
                 width: 160px;
-                height: 65px;
+                height: auto;
             }
         }
     }
     &__search {
         grid-area: input;
         padding-left: 0;
-        @include screen('tablet') {
-            padding-left: 20%;
-        }
+        display: flex;
+        flex-direction: row;
         @include screen('desktop') {
-            padding-left: 30%;
+            padding-left: 25%;
         }
         input {
-            width: 300px;
+            width: 260px;
             height: 30px;
             border: 0;
             border-bottom: 1px solid var(--color-dark);
+            @include screen('tablet') {
+                width: 350px;
+            }
             @include screen('desktop') {
                 width: 420px;
-                margin-right: 150px;
             }
             &::placeholder {
                 padding-left: 5px;
                 color: #a3a2a2;
             }
+        }
+        button {
+            border: 0;
+            background: transparent;
+            border-bottom: 1px solid var(--color-dark);
         }
     }
     &__shop {
@@ -59,6 +70,7 @@
         font-weight: var(--font-bold);
         color: var(--color-dark);
         display: flex;
+        justify-self: center;
         width: 80px;
         height: 40px;
         @include screen('desktop') {

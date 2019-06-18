@@ -17,7 +17,7 @@ body {
 
 @mixin screen($size) {
   $desktop: "(min-width: 1024px)";
-  $tablet: "(min-width: 768px)";
+  $tablet: "(min-width: 660px)";
   @if $size == desktop {
     @media only screen and #{$desktop} {
       @content;

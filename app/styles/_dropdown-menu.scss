@@ -2,10 +2,10 @@
   .nav-item-dropdown {
     position: relative;
     list-style: none;
-    &:hover > .dropdown-menu {
-      display: block;
-      opacity: 1;
-    }
+      &:hover > .dropdown-menu {
+        display: block;
+        opacity: 1;
+      }
   }
   
   .dropdown-trigger {
@@ -13,8 +13,7 @@
     &:focus + .dropdown-menu {
       display: block;
       opacity: 1;
-    }
-    
+    } 
   }
   
   .dropdown-menu {
@@ -42,7 +41,7 @@
         &:hover {
             transition: 0.3s;
         }
-    }
+      }
   }
   
   .dropdown-menu-item {
@@ -56,20 +55,20 @@
     overflow: hidden;
   }
   
-  .dropdown-content {
-    position: relative;
-    display: none;
-    width: 30%;
-    left: 0;
-    z-index: 1;
-  }
+.dropdown-content {
+  position: relative;
+  display: none;
+  width: 30%;
+  left: 0;
+  z-index: 1;
+}
 
-  .dropdown-trigger {
-    position: relative;
-    &:focus + .dropdown-content {
-        display: block;
-        opacity: 1;
-      }
+.dropdown-trigger {
+  position: relative;
+  &:focus + .dropdown-content {
+      display: block;
+      opacity: 1;
     }
+  }
     
   

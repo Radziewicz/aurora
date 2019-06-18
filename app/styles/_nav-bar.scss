@@ -17,6 +17,10 @@
             font-weight: var(--font-bold);
             text-transform: uppercase;
             font-size: var(--font-normal);
+            &:hover {
+                color: var(--color-accent);
+                transition: 0.3s;
+            }
         }
       }
 }
